@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/scroll_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/topboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#004E92"
+                android:background="@drawable/cardviewbg"
+                >
+
+
+                <TextView
+                    android:id="@+id/covid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="COVID-19"
+                    android:textColor="#4CAF50"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="50dp"
+                    app:srcCompat="@drawable/sick" />
+
+                <TextView
+                    android:id="@+id/sick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="85dp"
+                    android:text="FEELING SICK?"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/briefsick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginRight="200dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="if you feel sik with any covid-19 symptoms please call helpline number or  visit near hospital."
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+
+                    android:layout_marginTop="210dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="#8BC34A"
+                    android:drawableLeft="@drawable/ic_baseline_call_24"
+                    android:onClick="callhelp"
+                    android:text="+91-11-23978046" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                    android:layout_marginTop="290dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="#FF9800"
+                    android:onClick="trackcountries"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:padding="3dp"
+                        android:text="TRACK COUNTRIES"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="290dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="#FF9800"
+                    android:onClick="trackstate"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:padding="3dp"
+                        android:text="TRACK   STATE"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="290dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="#FF9800"
+                    android:onClick="covidmap"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:padding="3dp"
+                        android:text="NEARBY TESTING LAB"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="310dp"
+                    android:layout_marginTop="290dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="#FF9800"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:padding="3dp"
+                        android:text="HELPLINE NUMBER"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/preventionboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#fff"
+                android:layout_marginBottom="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/preventiontxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="PREVENTION"
+                    android:textColor="#4CAF50"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="40dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/handwash" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginRight="270dp"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="clean your hand often"
+                    android:textColor="#4CAF50" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/mask"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="153dp"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="155dp"
+                    android:layout_marginTop="150dp"
+
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="wear a face mask"
+                    android:textColor="#4CAF50" />
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/group"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="280dp"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="150dp"
+
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="avoid close contact"
+                    android:textColor="#4CAF50" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/symptomsboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                >
+
+                <TextView
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/roboto_thin"
+                    android:text="DON'T PANIC"
+                    android:textColor="#FFC107"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/ic_baseline_error_outline_24"
+                    android:layout_marginLeft="375dp"/>
+
+                <TextView
+                    android:id="@+id/symtomstxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="SYMTOMS"
+                    android:textColor="#4CAF50"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/fever"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="25dp"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginRight="270dp"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="fever"
+                    android:textColor="#4CAF50" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/headache"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="153dp"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="180dp"
+                    android:layout_marginTop="150dp"
+
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="headache"
+                    android:textColor="#4CAF50" />
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/cough"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="280dp"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="320dp"
+                    android:layout_marginTop="150dp"
+
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="cough"
+                    android:textColor="#4CAF50" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/global"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFDCDC"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="GLOBAL"
+                    android:textColor="#3F51B5"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_share_24"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="370dp"
+                    android:onClick="shareData"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cases"
+                    app:cardBackgroundColor="#004E92"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="40dp"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="CASES"
+                        android:textColor="#fff"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/total1cases"
+                        android:text="TOTAL CASES"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="18sp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:id="@+id/today1case"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="TODAY CASES"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="200dp"
+                        android:textSize="18sp"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:id="@+id/totalcases"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="70dp"
+                        android:text="0"
+                        android:textColor="#fff"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/todaycase"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="0"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginLeft="210dp"
+                        android:textSize="24sp"
+                        android:textColor="#fff"
+                        android:layout_marginBottom="15dp"/>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/death"
+                    app:cardBackgroundColor="#F82424"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="160dp"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="DEATH"
+                        android:textColor="#fff"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/total1death"
+                        android:text="TOTAL DEATH"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="18sp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:id="@+id/today1death"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="TODAY DEATH"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="200dp"
+                        android:textSize="18sp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/totaldeath"
+                        android:text="0"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="24sp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:id="@+id/todaydeath"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="0"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginLeft="210dp"
+                        android:textSize="24sp"
+                        android:textColor="#fff"
+                        android:layout_marginBottom="15dp"/>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recovery"
+                    app:cardBackgroundColor="#79DC07"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="281dp"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="RECOVERY"
+                        android:textColor="#fff"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/total1recovery"
+                        android:text="TOTAL RECOVERED"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="18sp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:id="@+id/today1recovery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="TODAY RECOVER"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="200dp"
+                        android:textSize="18sp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/totalrecovery"
+                        android:text="0"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="24sp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:id="@+id/todayrecovery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="0"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginLeft="210dp"
+                        android:textSize="24sp"
+                        android:textColor="#fff"
+                        android:layout_marginBottom="15dp"/>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/infoflobal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    app:cardBackgroundColor="#490092"
+                    android:layout_marginTop="402dp"
+                    app:cardCornerRadius="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="CRICTICAL:"
+                        android:id="@+id/serious"
+
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="ACTIVE:"
+                        android:id="@+id/active"
+
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="TEST:"
+                        android:id="@+id/test"
+
+                        android:layout_marginTop="70dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:layout_marginBottom="15dp"/>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
