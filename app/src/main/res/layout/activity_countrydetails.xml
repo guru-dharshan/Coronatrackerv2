@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#D3E6F4"
     android:orientation="vertical"
-    tools:context=".countrydetails">
+    tools:context=".UI.countrydetails">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/countryname"

@@ -11,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".statedetails"></activity>
-        <activity android:name=".coronastate" />
-        <activity android:name=".countrydetails" />
-        <activity android:name=".coronacountry" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".UI.statedetails"></activity>
+        <activity android:name=".UI.coronastate" />
+        <activity android:name=".UI.countrydetails" />
+        <activity android:name=".UI.coronacountry" />
+        <activity android:name=".UI.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

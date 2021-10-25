@@ -1,21 +1,23 @@
-package com.example.coronatrackerv2;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.coronatrackerv2.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.os.Bundle;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.coronatrackerv2.R;
+import com.example.coronatrackerv2.DATA.countrydata;
+import com.example.coronatrackerv2.ADAPTER.myadaptercountry;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,8 +28,8 @@ import java.util.List;
 
 public class coronacountry extends AppCompatActivity {
    ListView countrylist;
-   countrydata countrydata;
-   myadaptercountry myadaptercountry;
+   com.example.coronatrackerv2.DATA.countrydata countrydata;
+   com.example.coronatrackerv2.ADAPTER.myadaptercountry myadaptercountry;
     public static List<countrydata> countryModelsList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +42,7 @@ public class coronacountry extends AppCompatActivity {
         countrylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(getApplicationContext(),countrydetails.class).putExtra("position",position));
+                startActivity(new Intent(getApplicationContext(), countrydetails.class).putExtra("position",position));
             }
         });
         String url  = "https://corona.lmao.ninja/v2/countries/";

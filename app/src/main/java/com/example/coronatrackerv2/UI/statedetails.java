@@ -1,11 +1,13 @@
-package com.example.coronatrackerv2;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.coronatrackerv2.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.coronatrackerv2.R;
 
 public class statedetails extends AppCompatActivity {
     Integer positionstate;
@@ -31,7 +33,7 @@ public class statedetails extends AppCompatActivity {
         death=findViewById(R.id.statedeath);
         total=findViewById(R.id.statetotal);
 
-        name.setText("Region :"+coronastate.statelist.get(positionstate).getName());
+        name.setText("Region :"+ coronastate.statelist.get(positionstate).getName());
         active.setText("Total Case :"+coronastate.statelist.get(positionstate).getActive());
         death.setText("Death :"+coronastate.statelist.get(positionstate).getDeath());
         cured.setText("Cured :"+coronastate.statelist.get(positionstate).getCured());
