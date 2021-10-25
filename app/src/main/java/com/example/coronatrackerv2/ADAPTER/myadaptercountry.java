@@ -1,4 +1,4 @@
-package com.example.coronatrackerv2;
+package com.example.coronatrackerv2.ADAPTER;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,8 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
+import com.example.coronatrackerv2.DATA.countrydata;
+import com.example.coronatrackerv2.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class myadaptercountry extends ArrayAdapter<countrydata> {
@@ -21,7 +22,7 @@ public class myadaptercountry extends ArrayAdapter<countrydata> {
     private List<countrydata> countryModelsList;
 
     public myadaptercountry(Context context, List<countrydata> countryModelsList ) {
-        super(context,R.layout.countrylist,countryModelsList);
+        super(context, R.layout.countrylist,countryModelsList);
        this.context=context;
        this.countryModelsList=countryModelsList;
 

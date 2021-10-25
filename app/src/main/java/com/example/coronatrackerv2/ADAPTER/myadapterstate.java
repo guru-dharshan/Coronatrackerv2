@@ -1,4 +1,4 @@
-package com.example.coronatrackerv2;
+package com.example.coronatrackerv2.ADAPTER;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,13 +10,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.coronatrackerv2.DATA.statedata;
+import com.example.coronatrackerv2.R;
+
 import java.util.List;
 
 public class myadapterstate extends ArrayAdapter<statedata> {
     private Context context;
     private List<statedata> stateList;
     public myadapterstate(Context context,List<statedata> stateList){
-        super(context,R.layout.statelistview,stateList);
+        super(context, R.layout.statelistview,stateList);
         this.context=context;
         this.stateList=stateList;
 

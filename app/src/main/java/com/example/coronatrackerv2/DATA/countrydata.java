@@ -1,4 +1,4 @@
-package com.example.coronatrackerv2;
+package com.example.coronatrackerv2.DATA;
 
 public class countrydata {
 

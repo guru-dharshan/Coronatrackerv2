@@ -1,16 +1,15 @@
-package com.example.coronatrackerv2;
-
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.coronatrackerv2.UI;
 
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -18,6 +17,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.coronatrackerv2.R;
+import com.example.coronatrackerv2.ADAPTER.myadapterstate;
+import com.example.coronatrackerv2.DATA.statedata;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,8 +30,8 @@ import java.util.List;
 
 public class coronastate extends AppCompatActivity {
     ListView statelistview;
-    statedata statedata;
-    myadapterstate myadapterstate;
+    com.example.coronatrackerv2.DATA.statedata statedata;
+    com.example.coronatrackerv2.ADAPTER.myadapterstate myadapterstate;
     public static List<statedata> statelist=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +42,7 @@ public class coronastate extends AppCompatActivity {
         statelistview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(getApplicationContext(),statedetails.class).putExtra("position",position));
+                startActivity(new Intent(getApplicationContext(), statedetails.class).putExtra("position",position));
             }
         });
 

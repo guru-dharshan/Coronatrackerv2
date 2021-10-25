@@ -1,4 +1,4 @@
-package com.example.coronatrackerv2;
+package com.example.coronatrackerv2.DATA;
 
 public class statedata {
     private String name,active,cured,death,total;

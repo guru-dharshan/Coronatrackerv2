@@ -1,6 +1,4 @@
-package com.example.coronatrackerv2;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.coronatrackerv2.UI;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,12 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.coronatrackerv2.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,7 +60,7 @@ public void covidmap(View view){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         send = new Intent();
-        intent = new Intent(getApplicationContext(),coronacountry.class);
+        intent = new Intent(getApplicationContext(), coronacountry.class);
         todaycase=findViewById(R.id.todaycase);
         totalcase=findViewById(R.id.totalcases);
         todaydeath=findViewById(R.id.todaydeath);
@@ -68,7 +70,7 @@ public void covidmap(View view){
         test=findViewById(R.id.test);
         active=findViewById(R.id.active);
         crictical=findViewById(R.id.serious);
-        a = new Intent(getApplicationContext(),coronastate.class);
+        a = new Intent(getApplicationContext(), coronastate.class);
 
         String url  = "https://corona.lmao.ninja/v2/all/";
 
